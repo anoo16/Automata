@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validator</title>
+    <link rel="stylesheet" href="automata.css">
+</head>
+<body>
+    <!--
+    <div class="menu">
+        <div>File</div>
+        <div>Edit</div>
+        <div>Run</div>
+        <div>About us</div>
+    </div>
+    -->
+    <div class="box" id="box">
+    <h2>Please Input Scientific Numbers</h2>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <br>
+    <button id="validateButton">Check</button>
+    <br>
+    <div class="message" id="message">
+    </div>
+
+    <script>
+        document.getElementById("validateButton").addEventListener("click", function() {
+            let input = document.getElementById("numberInput").value.trim();
+            let regex = /^-?\d+(\.\d+)?(e-?\d+)?$/i;
+            let message = document.getElementById("message");
+            
+            if (input === "") {
+                message.textContent = "Please enter a value";
+                message.style.color = "blue";
+            } else if (regex.test(input)) {
+                message.textContent = "Yes, it is a number";
+                message.style.color = "green";
+            } else {
+                message.textContent = "No, it is not a number";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
