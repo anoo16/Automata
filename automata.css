@@ -1,6 +1,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
+    background-color: purple;
 }
 
 .menu {
@@ -26,7 +27,7 @@ body {
     padding: 2rem;
     width: 30rem;
     height: auto;
-    background-color: #dddddd;
+    background-color: plum;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
